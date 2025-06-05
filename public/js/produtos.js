@@ -1,0 +1,1 @@
+// Funções específicas para produtos

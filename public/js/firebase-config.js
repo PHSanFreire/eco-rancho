@@ -1,0 +1,1 @@
+// Configuração do Firebase (versão 9+)

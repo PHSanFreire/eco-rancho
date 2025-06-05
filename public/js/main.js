@@ -1,0 +1,1 @@
+// Código global JS será adicionado aqui nas próximas etapas
