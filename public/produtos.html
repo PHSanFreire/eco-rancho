@@ -1,1 +1,51 @@
-<!DOCTYPE html><html><head><title>Produtos</title></head><body><h1>Produtos</h1></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Produtos</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="menu">
+      <div class="logo">🐓 Eco-Rancho</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="clientes.html">Clientes/Fornecedores</a></li>
+        <li><a href="producao.html">Produção</a></li>
+        <li><a href="vendas.html">Vendas</a></li>
+        <li><a href="compras.html">Compras</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="dashboard">
+      <h2>Cadastrar Novo Produto</h2>
+      <form id="produto-form">
+        <input type="text" id="codigo" placeholder="Código de Barras (opcional)" />
+        <input type="text" id="nome" placeholder="Nome do Produto" required />
+        <input type="text" id="descricao" placeholder="Descrição" />
+        <input type="number" id="precoVenda" placeholder="Preço de Venda (R$)" step="0.01" required />
+        <input type="number" id="multiplo" placeholder="Múltiplo (ex: 12 para dúzias)" min="1" value="1" required />
+
+        <div id="grupo-deQualProduto" style="display: none;">
+          <label for="deQualProduto">De qual produto?</label>
+          <select id="deQualProduto">
+            <option value="">Selecione...</option>
+          </select>
+        </div>
+
+        <button type="submit">Salvar Produto</button>
+      </form>
+
+      <h3>Produtos Cadastrados</h3>
+      <ul id="lista-produtos"></ul>
+    </section>
+  </main>
+
+  <script type="module" src="js/firebase-config.js"></script>
+  <script type="module" src="js/produtos.js"></script>
+</body>
+</html>

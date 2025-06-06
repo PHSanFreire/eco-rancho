@@ -1,1 +1,55 @@
-<!DOCTYPE html><html><head><title>Compras</title></head><body><h1>Compras</h1></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Registrar Compra</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="menu">
+      <div class="logo">🐓 Eco-Rancho</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="clientes.html">Clientes/Fornecedores</a></li>
+        <li><a href="producao.html">Produção</a></li>
+        <li><a href="vendas.html">Vendas</a></li>
+        <li><a href="compras.html">Compras</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="dashboard">
+      <h2>Registrar Compra</h2>
+      <form id="compra-form">
+        <select id="fornecedor" required>
+          <option value="">Selecione o fornecedor</option>
+        </select>
+        <select id="produto">
+          <option value="">Selecione o produto</option>
+        </select>
+        <input type="number" id="quantidade" placeholder="Quantidade" />
+        <input type="number" id="valorUnitario" placeholder="Valor Unitário (R$)" step="0.01" />
+        <button type="button" id="adicionar">Adicionar ao Carrinho</button>
+        <ul id="carrinho"></ul>
+        <input type="date" id="data" />
+        <select id="formaPagamento" required>
+          <option value="">Forma de Pagamento</option>
+          <option value="Dinheiro">Dinheiro</option>
+          <option value="Pix">Pix</option>
+          <option value="Fiado">Fiado</option>
+        </select>
+        <button type="submit">Finalizar Compra</button>
+      </form>
+
+      <h3>Compras Realizadas</h3>
+      <ul id="lista-compras"></ul>
+    </section>
+  </main>
+
+  <script type="module" src="js/firebase-config.js"></script>
+  <script type="module" src="js/compras.js"></script>
+</body>
+</html>

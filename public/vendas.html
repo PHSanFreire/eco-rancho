@@ -1,1 +1,58 @@
-<!DOCTYPE html><html><head><title>Vendas</title></head><body><h1>Vendas</h1></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Registrar Venda</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="menu">
+      <div class="logo">🐓 Eco-Rancho</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="clientes.html">Clientes/Fornecedores</a></li>
+        <li><a href="producao.html">Produção</a></li>
+        <li><a href="vendas.html">Vendas</a></li>
+        <li><a href="compras.html">Compras</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="dashboard">
+      <h2>Registrar Venda</h2>
+      <form id="venda-form">
+        <select id="cliente">
+          <option value="">Cliente (opcional)</option>
+        </select>
+        <select id="produto">
+          <option value="">Selecione o produto</option>
+        </select>
+        <input type="number" id="quantidade" placeholder="Quantidade" />
+        <input type="number" id="valorUnitario" placeholder="Valor Unitário (R$)" step="0.01" />
+        <button type="button" id="adicionar">Adicionar ao Carrinho</button>
+
+        <ul id="carrinho"></ul>
+        <input type="number" id="desconto" placeholder="Desconto (opcional)" step="0.01" />
+        <input type="number" id="acrescimo" placeholder="Acréscimo (opcional)" step="0.01" />
+        <select id="formaPagamento" required>
+          <option value="">Forma de Pagamento</option>
+          <option value="Dinheiro">Dinheiro</option>
+          <option value="Pix">Pix</option>
+          <option value="Fiado">Fiado</option>
+        </select>
+        <input type="date" id="data" required />
+        <button type="submit">Finalizar Venda</button>
+      </form>
+
+      <h3>Vendas Realizadas</h3>
+      <ul id="lista-vendas"></ul>
+    </section>
+  </main>
+
+  <script type="module" src="js/firebase-config.js"></script>
+  <script type="module" src="js/vendas.js"></script>
+</body>
+</html>

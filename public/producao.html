@@ -1,1 +1,43 @@
-<!DOCTYPE html><html><head><title>Produção</title></head><body><h1>Produção</h1></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Lançamento de Produção</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="menu">
+      <div class="logo">🐓 Eco-Rancho</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="clientes.html">Clientes/Fornecedores</a></li>
+        <li><a href="producao.html">Produção</a></li>
+        <li><a href="vendas.html">Vendas</a></li>
+        <li><a href="compras.html">Compras</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="dashboard">
+      <h2>Lançar Produção</h2>
+      <form id="producao-form">
+        <select id="produto" required>
+          <option value="">Selecione um produto</option>
+        </select>
+        <input type="number" id="quantidade" placeholder="Quantidade Produzida" required />
+        <input type="date" id="data" required />
+        <button type="submit">Salvar Produção</button>
+      </form>
+
+      <h3>Registros de Produção</h3>
+      <ul id="lista-producao"></ul>
+    </section>
+  </main>
+
+  <script type="module" src="js/firebase-config.js"></script>
+  <script type="module" src="js/producao.js"></script>
+</body>
+</html>
